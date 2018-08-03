@@ -160,7 +160,7 @@ public class ContentLengthInputStream extends InputStream {
      * @throws java.io.IOException Should an error occur on the wrapped stream.
      */
     @Override
-    public int read (final byte[] b, final int off, final int len) throws java.io.IOException {
+    public int read(final byte[] b, final int off, final int len) throws java.io.IOException {
         if (closed) {
             throw new IOException("Attempted read from closed stream.");
         }
