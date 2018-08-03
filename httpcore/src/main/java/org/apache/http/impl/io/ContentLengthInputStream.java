@@ -139,7 +139,7 @@ public class ContentLengthInputStream extends InputStream {
             if (pos < contentLength) {
                 throw new ConnectionClosedException(
                         "Premature end of Content-Length delimited message body (expected: "
-                        + contentLength + "; received: " + pos);
+                        + contentLength + "; received: " + pos + ")");
             }
         } else {
             pos++;
@@ -177,7 +177,7 @@ public class ContentLengthInputStream extends InputStream {
         if (count == -1 && pos < contentLength) {
             throw new ConnectionClosedException(
                     "Premature end of Content-Length delimited message body (expected: "
-                    + contentLength + "; received: " + pos);
+                    + contentLength + "; received: " + pos + ")");
         }
         if (count > 0) {
             pos += count;
